@@ -1,0 +1,28 @@
+.topnav-container a {
+    text-decoration: none;
+    color: #000;
+}
+
+.topnav-container a:hover {
+    color: white;
+}
+
+.topnav-container__ul li{
+    display: flex;
+    float: left;
+    width: 100%;
+    position: relative;
+    justify-content: space-around;
+}
+
+.topnav-container__ul {
+    display: inline-flex;
+    background-color: #aaa;
+    width: 100%;
+    padding: 25px;
+
+}
+
+
+
+

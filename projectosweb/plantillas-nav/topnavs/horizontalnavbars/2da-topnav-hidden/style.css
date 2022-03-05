@@ -1,0 +1,22 @@
+nav {
+    background-color: black;
+    padding: 25px;
+    display: flex;
+    
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: aqua;
+    background-color: blueviolet;
+    width: 100%;
+    font-size: 20px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.nav-enlace:hover {
+    background-color: blue;
+}

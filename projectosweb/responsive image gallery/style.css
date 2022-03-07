@@ -1,0 +1,49 @@
+ * {
+     box-sizing: border-box;
+ }
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ .header {
+    font-size: 30px;
+    text-align: center;
+    padding: 32px;   
+}
+
+.row {
+    display: flex;
+    padding: 0px 3px;
+    flex-wrap: wrap;
+}
+
+/*crear columnas que se posicionen una al lado de la otra */
+
+.column {
+    width: 25%;
+    max-width: 25%;
+    padding: 0px 4px;
+}
+
+.column img {
+    padding-top: 7px;
+    vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }

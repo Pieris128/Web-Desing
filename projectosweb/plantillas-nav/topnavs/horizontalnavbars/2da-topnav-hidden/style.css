@@ -1,7 +1,27 @@
+button {
+    background-color: transparent;
+    border: none;
+    float: right;
+    
+}
+
+    .fa-solid {
+       display: block;
+       padding: 10px;
+       font-size: 30px;
+ }
+
+ button:active nav {
+     display: flex;
+ }
+
+  
+
+
 nav {
     background-color: black;
     padding: 25px;
-    display: flex;
+    display: none;
     
 }
 
@@ -20,3 +40,4 @@ nav a {
 .nav-enlace:hover {
     background-color: blue;
 }
+

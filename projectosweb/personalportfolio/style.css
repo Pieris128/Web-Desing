@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+/* font-family: 'Dancing Script', cursive; */
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+/* font-family: 'Nanum Gothic', sans-serif; */
+
+:root {
+  --color-white: #F5F5F5;
+  --color-brick: #F05454;
+  --color-blue: #30475E;
+  --color-black: #121212;
+
+
+}
+
+*, *::after, *::before {
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family:'Nanum Gothic', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+
+/* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+  font-size: 62.5%;
+}
+
+/* MOBILE FIRST */
+
+
+/* ................ 
+  Containers & primary elements Styles
+...................*/
+
+
+/*.................
+navbar
+..................*/
+nav {
+  display: block;
+  width: 100vw;
+  height: 5vh;
+  background-color: var(--color-white);
+  
+}
+
+#links-container ul {
+  display:flex;
+  line-height: 2vh;
+  padding: 1.25vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+#links-container li {
+  display: block;
+  flex-direction:row;
+  list-style: none;
+  border-right: 2px solid var(--color-blue);
+  margin: auto;
+  padding-right: 2vw;
+  font-size: 1.6rem;
+  font-weight: 600;
+    
+}
+
+
+#links-container li:hover {
+  border-right: 2px solid var(--color-brick);
+}
+
+#links-container a {
+  color: var(--color-blue) ;
+}
+
+#links-container a:visited {
+  color: var(--color-black);
+}
+
+#links-container a:hover {
+  color: var(--color-brick);
+}
+
+
+/*      ...............        */
+
+
+
+/* .......................
+      welcome section
+............................*/
+
+#welcome-section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-brick);
+  
+}
+
+#hey-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+
+}
+
+#hey-container > * {
+  text-align: left;
+  display: block;
+  padding: 2vh;
+  
+}
+
+#hey-container > h1, h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.8rem;
+  color: var(--color-white);
+}
+
+#hey-container > p {
+  font-size: 2rem;
+  margin: auto;
+  color: var(--color-brick);
+}
+
+/* .......................
+      welcome section EFFECTS
+............................*/
+
+/* .................
+  Animations and effects
+......................*/
+
+#hey-container > h1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 6rem;
+  width: 145px;
+  animation-name: descubrir1;
+  animation-delay: 1.2s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  background-color: var(--color-brick);
+ 
+
+
+}
+
+#hey-container > h2::before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 6rem;
+  width: 332px;
+  animation-name: descubrir2;
+  animation-delay: 4s;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+  background-color: var(--color-brick);
+  
+
+}
+
+@keyframes descubrir1 {
+  0% {
+    left: 20px;
+    
+    
+  }
+  99% {
+    left: 145px;
+    
+  }
+  100% {
+    width: 0px;
+  }
+
+}
+
+@keyframes descubrir2 {
+  0% {
+    left: 20px;
+    
+  }
+  99% {
+    left: 332px;
+    
+  }
+  100% {
+    width: 0px;
+  }
+ 
+}
+
+#hey-container > p {
+  animation-name: appear;
+  animation-delay: 6.4s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+
+  
+}
+
+@keyframes appear {
+  0% {
+    color: var(--color-brick);
+  }
+  100% {
+    color: var(--color-black);
+  }
+
+}
+
+
+/*..............................*/
+
+
+/* ......................
+projects container
+....................*/
+
+#projects-container {
+  background-color: var(--color-blue);
+  padding: 20px;
+}
+
+#projects > h2 {
+  font-family: 'Nanum Gothic', sans-serif; ;
+  font-size: 2.2rem;
+  
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  padding-left: 2vw;
+
+
+}
+
+#projects > h2::after {
+
+  content: '';
+  display: block;
+  height: 5px;
+  width: 310px;
+  margin-top: 2px;
+  background-color: var(--color-white);
+
+}
+
+.project-tile {
+    
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-black);
+  margin: 0 auto 2rem auto;
+  
+}
+
+/*.....................
+projects basic styles
+........................*/
+
+.project-tile p {
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem;
+  color: var(--color-white);
+}
+
+
+.code {
+  color: var(--color-brick);
+  transition: color 0.3s ease-out;
+}
+
+/*...............
+info section
+..................*/
+
+#contact-info-container {
+  background-color: var(--color-black);
+
+}
+
+#contact-info-container h2 {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 1.7rem;
+  padding: 1.5rem;
+
+}
+
+#icons-container {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  background-color: var(--color-white);
+  height: 24vh;  
+}
+
+.techno-icons {
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+}
+
+#html-icon {
+   background-image: url(src/html_application_3021.png);
+   -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
+
+#js-icon {
+  background-image: url(src/js_3720.png);
+  -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
+
+#css-icon {
+  background-image: url(src/css_3721.png);
+  -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
+
+#social-media-container {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-black);
+  align-items: center;
+  
+
+}
+
+#btn {
+  margin: auto;
+  padding: 5%;
+  
+}
+
+#btn h2 {
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 2.2rem;
+  
+
+}
+
+#social-icons-container {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  margin: auto;
+
+}
+
+.social-icon {
+  height: 45px;
+  width: 45px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 5vw;
+}
+
+#facebook {
+  background-image: url(/facebook_icon-icons.com_53612.png);
+  
+}
+
+#linkedin {
+  background-image: url(/linkedin_icon-icons.com_53609.png);
+}
+
+#profile-link {
+  background-image: url(/code_development_github_open_source_programming_source_icon_123274.png);
+}
+
+.social-icon:hover {
+  cursor: pointer;
+}
+
+#footer {
+  background-color: var(--color-white);
+  width: 100vw;
+  height: 5vh;
+  display: block;
+  padding: 1rem;
+
+}
+
+footer p {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+@media only screen and (min-width: 768px) {
+
+  #links-container li {
+    font-size: 2rem;
+  }
+
+  #hey-container > h1, h2 {
+    font-size: 5rem;
+  }
+
+  #hey-container > p {
+    font-size: 2.5rem;
+  }
+
+  #hey-container > h1::before {
+    height: 7rem;
+    width: 191px;
+    
+  }
+  
+  #hey-container > h2::before {
+    height: 7rem;
+    width: 436px;
+  
+  
+  }
+  
+  @keyframes descubrir1 {
+    0% {
+      left: 0;
+      width: 100vw;
+            
+    }
+    
+    99% {
+      left: 50vw;
+      
+    }
+    100% {
+      width: 0;
+    }
+
+  }
+   
+  
+  
+  
+  @keyframes descubrir2 {
+    0% {
+      left: 0;
+      width: 100vw;
+      
+    }
+    99% {
+      left: 80vw;
+      
+      
+    }
+
+    100% {
+      width: 0;
+    }
+   
+   
+  }
+
+  #projects > h2 {
+    font-size: 3rem;
+  }
+
+  .project-tile p {
+    font-size: 3rem;
+  }
+
+  .techno-icons {
+    
+    height: 80px;
+    width: 80px;
+  }
+
+  #contact-info-container h2 {
+    font-size: 2.8rem;
+  }
+
+  #btn h2 {
+    font-size: 3.5rem;
+  }
+
+  .social-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  footer p {
+    font-size: 2rem;
+  }
+
+} 
+  
+@media only screen and (min-width: 1025px) {
+
+  #links-container li {
+    font-size: 2.6rem;
+  }
+
+  #hey-container > h1, h2 {
+    font-size: 8rem;
+  }
+
+  #hey-container > p {
+    font-size: 4rem;
+  }
+
+  #hey-container > h1::before {
+    height: 10rem;
+    width: 304px;
+    
+  }
+  
+  #hey-container > h2::before {
+    height: 10rem;
+    width: 697px;
+  
+  
+  }
+  
+  @keyframes descubrir1 {
+    0% {
+      left: 0px;
+      width: 100vw;
+            
+    }
+    
+    99% {
+      left: 50vw;
+      
+    }
+    100% {
+      width: 0;
+    }
+
+  }
+   
+  
+  
+  
+  @keyframes descubrir2 {
+    0% {
+      left: 0px;
+      width: 100vw;
+      
+    }
+    99% {
+      left: 80vw;
+      
+      
+    }
+
+    100% {
+      width: 0;
+    }
+   
+   
+  }
+
+  #projects > h2 {
+    font-size: 5rem;
+  }
+
+  .project-tile p {
+    font-size: 4rem;
+  }
+  .code {
+    color: var(--color-black);
+    transition: color 0.3s ease-out;
+  }
+  .project-tile:hover .code {
+    color: var(--color-brick);
+  }
+
+  .techno-icons {
+    image-rendering: optimizeQuality;
+    height: 120px;
+    width: 120px;
+  }
+
+  .social-icon {
+    width: 110px;
+    height: 110px;
+    image-rendering: optimizeQuality;
+  }
+
+  #projects-container {
+    padding: auto;
+  }
+  .project-tile {
+    width: 600px;
+    height: 580px;
+    overflow: hidden;
+    
+  }
+
+  .project-tile img {
+    object-fit: fit;
+      
+  }
+
+  #projects > h2::after {
+    width: 610px;
+  }
+
+  #contact-info-container h2 {
+    padding: 4rem;
+  }
+
+  #icons-container {
+    height: 50vh;
+  }
+
+  #btn h2 {
+    font-size: 6rem;
+  }
+
+  footer {
+    height: 15vh;
+  }
+  footer p {
+    padding: 20px;
+  }
+
+  nav {
+    position: fixed;
+    
+  }
+}
+
+

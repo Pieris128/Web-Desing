@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Slab&display=swap');
+
+:root {
+  --color-orange:#f86f6f;
+  --color-light_orange:#fe9393;
+  --color-pink:#ff35c2;
+  --color-light_pink:#ff7dd8;
+  --color-blue:#4fa8fb;
+}
+
+
+/* .....................
+
+Global Styles
+
+.......................*/
+
+*, *::after, *::before {
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+  /* font-family: 'Press Start 2P', cursive; */
+}
+
+main {
+  background-color: var(--color-light_orange);
+}
+
+#links_container {
+  display: none;
+  
+}
+
+#clickleable_items_container {
+ display: flex;
+ flex-direction:row;
+}
+
+#js_container {
+  display:inline-block;
+  background-color: grey;
+  width: 90vw;
+  height: 75px;
+  position: relative;
+  
+  
+}
+
+#button_container {
+  background-color: lightgrey;
+  display: inline-block;
+  width: 10vw;
+  height: 75px;
+  position:relative;
+}
+
+button {
+  background-color: var(--color-pink);
+  border: 2px solid var(--color-pink);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: 15px;
+  margin-left: 10px;
+  box-shadow: -3px 2px 10px #ff3fc2;
+  cursor: pointer;
+}
+
+#button_shine {
+  position:absolute;
+  background-color: hsl(318,100%,67%);
+  border-radius: 50%;
+  width: 46px;
+  height: 48px;
+  margin-top:-24px;
+  margin-left:-4px;
+  }
+
+button:active {
+  box-shadow: -1px 1px 3px  #ff3fc2;
+  width: 49px;
+  height: 49px;
+  margin-top: 16px;
+  margin-left: 9px;
+  transition: box-shadow 0.01s linear;  
+}
+
+main header {
+  font-family: 'Press Start 2P', cursive;
+  font-weight: 500;
+  font-size: 1.325rem;
+  padding: 25px;
+  margin-top: 20px;
+  color: var(--color-pink);
+}
+
+#js_container > header {
+  font-size: 1.5rem;
+  padding: 15px;
+ /*
+  margin-top: 20px; */
+  font-family: 'Press Start 2P', cursive;
+  font-weight: 500;
+  
+}
+
+p {
+  line-height: 1.5rem;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+code {
+  display: block;
+  position: relative;
+  text-align: left;
+  background-color: hsl(0,78%,78%) ;
+  margin: 20px;
+  padding: 15px;
+  line-height: 1.5rem;
+  margin-right: 50px;
+  margin-left: 50px;
+  border-radius: 3px;
+}
+
+main li {
+  line-height:1.4rem;
+  padding: 3px;
+}
+
+/* .....................
+
+Small devices first
+
+.......................*/
+
+@media screen and (max-width:600px) {
+  
+  
+  
+}

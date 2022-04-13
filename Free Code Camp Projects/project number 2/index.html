@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second FCC Project "Survey Form"</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+          <h1 id="title" class="text-center">Invoke your Lord Kitten</h1>
+          <p id="description" class="description text-center">Carefull, it could be dangerous. </p>
+        </header>
+        <form id="survey-form">
+          <div class="form-group">
+            <label id="name-label" for="name">Name</label>
+            <input
+                   type="text"
+                   name="name"
+                   id="name"
+                   class="form-control"
+                   placeholder="Enter an evil kitten name"
+                   required
+                   />
+          </div>
+          <div class="form-group">
+            <label id="email-label" for="email">Email</label>
+            <input
+                   type="email"
+                   name="email"
+                   id="email"
+                   class="form-control"
+                   placeholder="U could need help... "
+                   required
+                   />
+          </div>
+          <div class="form-group">
+            <label id="number-label" for="number">Age<span class="clue">(optional)</span> </label>
+            <input
+                   type="number"
+                   name="age"
+                   id="number"
+                   min="1"
+                   max="999"
+                   class="form-control"
+                   placeholder="666"
+                   />
+          </div>
+          <div class="form-group" >
+            <p>Now you must choose... be wise...</p>
+            <select id="dropdown" name="type-of-michi" class="form-control" required>
+               <option disabled selected value>Choose an evil kitten seed</option>
+              <option value="destroyer">Destroyer of Worlds</option>
+              <option value="sage">Mytical sage</option>
+              <option value="trainee">Upcoming Nightmare</option>
+              <option value="fatOne">Bloody Ancient Super Fluffy Killer</option>
+              <option value="kittensaur">kittensaur</option>
+              <option value="soulEater">Lovely SOUL EATER</option>
+            </select>
+          </div>
+           <div class="form-group">
+             <p>Want it in some special color?<span> (u can mix them)</span></p>
+              <label>
+            <input
+                   name="kitten-color"
+                   value="white"
+                   type="checkbox"
+                   class="input-checkbox"
+                   />White mish</label>
+                 <label>
+            <input
+                   name="kitten-color"
+                   value="yellow"
+                   type="checkbox"
+                   class="input-checkbox"
+                   />Yellow</label>
+              <label>
+            <input
+                   name="kitten-color"
+                   value="brown"
+                   type="checkbox"
+                   class="input-checkbox"
+                   />Brown kitty</label>
+              <input
+                   name="kitten-color"
+                   value="black"
+                   type="checkbox"
+                   class="input-checkbox"
+                  />Black one</label>
+             
+          <div class="form-group">
+            <p>Tell us how much fear do you feel now u know your time is running out</p>
+            <label>
+            <input
+                   name="user-fear"
+                   value="Lot"
+                   type="radio"
+                   class="input-radio"
+                   checked
+                   />A lot</label>
+            <label>
+              <input
+                     name="user-fear"
+                     value="SoScared"
+                     type="radio"
+                   class="input-radio"
+                     />So scared i cant choose</label>
+            <label>
+              <input 
+                     name="usar-fear"
+                     value="notSure"
+                     type="radio"
+                   class="input-radio"
+                     />Not sure</label>
+             <label>
+              <input 
+                     name="usar-fear"
+                     value="poopy"
+                     type="radio"
+                   class="input-radio"
+                     />Just poop my pants</label>
+             <label>
+              <input 
+                     name="usar-fear"
+                     value="exited"
+                     type="radio"
+                   class="input-radio"
+                     />So exited</label>
+          </div>
+           <div class="form-group">
+             <p>Here u can start writing your will</p>
+             <textarea 
+                       id="will"
+                       class="input-textarea"
+                       name="will"
+                       placeholder="i'll pray for u..."
+                       ></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">Submit 
+            </button>
+          </div>
+        </form>
+      </div>
+      <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>

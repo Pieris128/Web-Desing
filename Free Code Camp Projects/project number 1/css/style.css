@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+* {
+font-family: 'Pangolin', cursive;
+  font-weight:900;
+  color: white;
+}
+
+.center-text {
+  text-align: center;
+  line-height: 1.5rem;
+  font-size: 1.5rem
+}
+
+h1::before {
+  content:'"';
+    font-size: 70px;
+}
+
+.conteiner {
+  
+  background: black;
+  margin: 0;
+  padding: 1.125rem;
+}
+
+figure {
+  display:block;
+  background: white;
+  padding: 1.125rem;
+  }
+
+.fig-item {
+  display: block;
+  margin: 1.125rem auto 1.125rem auto;
+  padding: 1.125rem
+  
+  
+}
+
+figure > p {
+  color: black;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.film-list{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  padding: 1.125rem;
+  
+  
+}
+
+.list-conteiner {
+  padding: 1.5rem;
+  
+  }
+
+
+li {
+  line-height: 2rem;
+  
+}
+
+footer {
+  text-align: center;
+  
+}
+
+a:hover {
+  color: yellow;
+}
+

@@ -1,0 +1,11 @@
+@use 'sass:color'; //built-in module de sass
+@use '../abstracts/' as *;
+
+:root {
+@each $name, $value in $colors {
+  // aca hace un loop para modificar los colores
+  --#{$name}-light: #{$value};
+  --#{$name}-dark: #{color.adjust($value, $lightness: -40%)}; //usa una funcion build-in que permite ajustar el color color.adjust()
+  
+  }
+}

@@ -1,0 +1,80 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+fieldset {
+    height: 400px;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    min-inline-size: min-content;
+    border: 0px;
+    padding-block-start: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    padding-block-end: 0;
+    
+}
+
+fieldset legend {
+    font-size: 1.8em;
+    text-align: center;
+    font-family: inherit;
+    text-decoration: underline;
+    padding: 8px;
+    
+
+}
+
+.wrapperClass {
+   width: 100vw;
+   height: 400px;
+   text-align: center;
+   display: grid;
+   place-content: center;
+
+}
+
+.radioGroupClass {
+    display: inline-block;
+    border-radius: 4%;
+    width: 270px;
+    height: 330px;
+    margin: 0 10px 10px 10px;
+    box-shadow: 0 0 10px #c6c6c6c3;
+    overflow: hidden;
+
+}
+
+
+
+.radioGroupClass input {
+   display: none; 
+
+}
+
+.radioGroupClass label {
+    height: 90px;
+    background-color: rgba(0,51,160,255);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    place-content: center;
+    color: white;
+    font-size: 1.3em;
+}
+
+.radioGroupClass span {
+    font-size: 1.6em;
+    color: rgba(145,208,7,255);
+}
+
+.radioGroupClass + .radioGroupClass label {
+    background-color: rgba(0,114,206,255);
+}
+
+.radioGroupClass + .radioGroupClass + .radioGroupClass label {
+    background-color: rgba(108,172,228,255);
+}
+

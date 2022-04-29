@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <fieldset ngIf="schemaRB !== null">
+        <legend>{{legend}}</legend>
+        <div class="wrapperClass">
+            <ng-containerngFor="let item of schemaRB">
+                <div class="radioGroupClass" (click)="valueChange(item.value)"
+                    [ngClass]="{'active' : updateClass(item.value)}">
+                    <input type="radio" name="{{item.name}}" id="{{item.id}}" value="{{item.value}}"
+                        [checked]="(valueSelected === item.value) ? true : false">
+                    <label for="{{item.id}}">
+                        <i></i>{{item.text}}
+                        <span class="spanRadioClass"></span>
+                    </label>
+                </div>
+                <div class="radioGroupClass" (click)="valueChange(item.value)"
+                [ngClass]="{'active' : updateClass(item.value)}">
+                <input type="radio" name="{{item.name}}" id="{{item.id}}" value="{{item.value}}"
+                    [checked]="(valueSelected === item.value) ? true : false">
+                <label for="{{item.id}}">
+                    <i></i>{{item.text}}
+                    <span class="spanRadioClass"></span>
+                </label>
+            </div>
+            <div class="radioGroupClass" (click)="valueChange(item.value)"
+            [ngClass]="{'active' : updateClass(item.value)}">
+             <label for="{{item.id}}">
+                <i></i>{{item.text}}
+                <span class="spanRadioClass"></span>
+                <input type="radio" name="{{item.name}}" id="{{item.id}}" value="{{item.value}}"
+                [checked]="(valueSelected === item.value) ? true : false">
+            </label>
+        </div>
+                        
+            </ng-container>
+        </div>
+    </fieldset>
+</body>
+</html>

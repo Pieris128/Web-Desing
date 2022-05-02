@@ -1,0 +1,142 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding and reset fonts */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+header {
+  background-color: #3b4248;
+}
+
+.navbar__container {
+  padding: 15px 0;
+  background-color: transparent;
+  text-align: center;
+  display: flex;
+}
+
+.navbar__logo-container {
+  line-height: 20px;
+  font-weight: 600;
+  flex: 1 1 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+}
+.navbar__logo-container img {
+  width: 100px;
+  height: 40px;
+  background-color: #01bcf3;
+}
+
+.navbar__links-container {
+  line-height: 20px;
+  font-weight: 600;
+  flex: 1 1 70%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.navbar__links-container a {
+  text-decoration: none;
+  width: 100px;
+  height: 40px;
+  padding: 10px;
+  color: #9da1a4;
+  text-transform: uppercase;
+  transition: all 0.2s linear;
+}
+.navbar__links-container a:hover {
+  color: white;
+}
+
+.menu-btn {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .navbar__container {
+    display: block;
+    position: relative;
+  }
+
+  .navbar__logo-container {
+    display: inline-block;
+    width: 70vw;
+    vertical-align: middle;
+  }
+
+  .navbar__links-container {
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    background-color: #3b4248;
+    width: 200px;
+    height: 240px;
+  }
+
+  .navbar__link {
+    margin: 30px auto;
+    display: block;
+  }
+
+  .menu-btn {
+    display: inline-block;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    vertical-align: middle;
+  }
+  .menu-btn i {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ccc;
+    cursor: pointer;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

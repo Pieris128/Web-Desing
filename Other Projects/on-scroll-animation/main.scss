@@ -1,0 +1,109 @@
+$white: #FFFFFF;
+$black: #0A0F0F;
+$bg: #B5446E;
+
+// FONTS
+$font-a: 'Roboto', sans-serif;
+
+@mixin sm() {
+    @media (min-width: 501px) {
+        @content;
+    }
+}
+@mixin md() {
+    @media (min-width: 1101px) {
+        @content;
+    }
+}
+
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+}
+
+
+html, 
+body{
+	
+}
+
+body{
+	background: $bg;
+	font-family: $font-a;
+}
+
+.c-main{
+	
+	height: 300vh;
+	display: block;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+
+}
+
+.c-logo{
+	
+   position: fixed;
+   top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+   z-index: 2;
+
+   &__svg{
+
+       width: 280px;
+       display: block;
+       max-width: 100%;
+       margin: 0px;
+       position: relative;
+       height: auto;
+
+   }
+
+   &__svg-item{
+
+		 fill: #FFFFFF;
+       transition: all 0.3s ease-in-out 0s;
+		   
+		 &--out{
+
+       		transition: all 0.2s ease-in-out 0.2s;
+            opacity: 1;
+            visibility: visible;
+
+            .is-small &{
+
+                opacity: 0;
+                visibility: hidden;
+                transition-delay: 0s;
+					
+					/* CSS
+					.is-small .c-logo__svg-item--out{ 
+							opacity: 0; 
+							visibility: hidden;
+							transition-delay: 0s;
+			 		}
+					*/
+
+            }
+
+        }
+
+        &--move{
+
+            transition: all 0.36s ease-in-out 0s;
+
+            .is-small &{
+
+                transform: translateX(-171px);
+                transition-delay: 0s;
+
+            }
+
+        }
+
+    }
+
+}
